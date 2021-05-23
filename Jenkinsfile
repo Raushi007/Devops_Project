@@ -1,6 +1,7 @@
 pipeline{
-    agent  {
-        label 'master'
+    agent any
+    enviromentt  {
+        /opt/apache-maven-3.8.1/bin
     }
     
     stages{
