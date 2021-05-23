@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        label 'agent'
+        label 'master'
     }
     stages{
         stage('checkout'){
@@ -10,6 +10,7 @@ pipeline{
     }
         stage('build'){
             steps {
+                sh "echo $PATH"
                 sh "mvn clean install"
         }
     }
