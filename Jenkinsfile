@@ -1,6 +1,8 @@
 pipeline{
-    agent {
-        label 'master'
+    agent any
+    tools {
+        maven 'Maven 3.8.1
+        
     }
     stages{
         stage('checkout'){
@@ -10,7 +12,8 @@ pipeline{
     }
         stage('build'){
             steps {
-                sh "echo $PATH"
+                sh "echo PATH = ${PATH}"
+                echo "M2_HOME = ${M2_HOME}"
                 sh "mvn clean install"
         }
     }
