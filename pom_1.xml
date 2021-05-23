@@ -15,10 +15,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <properties>
-     <maven.compiler.source>1.8</maven.compiler.source>
-     <maven.compiler.target>1.8</maven.compiler.target>
-</properties>
   <build>
     <plugins>
       <plugin>
@@ -46,5 +42,17 @@
             <version>2.3</version>
         </plugin>
     </plugins>
-</reporting> 
+</reporting>
+<distributionManagement>
+    <repository>
+        <id>artifactory-releases</id>
+        <name>maven</name>
+        <url>http://fa1b7800.ngrok.io/artifactory/maven</url>
+    </repository>
+    <snapshotRepository>
+        <id>artifactory-snapshots</id>
+        <name>artifactory</name>
+        <url>http://fa1b7800.ngrok.io/artifactory/maven</url>
+    </snapshotRepository>
+</distributionManagement>  
 </project>
