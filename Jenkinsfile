@@ -4,7 +4,7 @@
     AWS_DEFAULT_REGION="${params.REGION}"
   }
   stages {
-    stage('AWS') {
+    stage('AWS Instance Listing') {
       steps {
         sh '''
          aws ec2 describe-instances \
